@@ -1,10 +1,13 @@
 package variaveisEConstantes;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercício1 {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
+		
+		DecimalFormat df = new DecimalFormat("#####.##");
 
 		float salario;
 		float abono;
@@ -17,7 +20,7 @@ public class Exercício1 {
 		abono = leia.nextFloat();
 
 		novoSalario = salario + abono;
-		System.out.println("Novo Salário: " + novoSalario);
+		System.out.println("Novo Salário: " + df.format(novoSalario));
 
 	}
 }
