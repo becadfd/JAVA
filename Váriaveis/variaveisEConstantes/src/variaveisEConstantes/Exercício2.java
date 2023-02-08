@@ -1,9 +1,12 @@
 package variaveisEConstantes;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercício2 {
 	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat("###.##");
 
 		float nota1, nota2, nota3, nota4, mediaFinal;
 
@@ -23,6 +26,7 @@ public class Exercício2 {
 
 		mediaFinal = (nota1 + nota2 + nota3 + nota4)/4;
 		System.out.println("Média Final: " + mediaFinal);
+		System.out.println("Média Final: " + df.format(mediaFinal));
 
 	}
 }
