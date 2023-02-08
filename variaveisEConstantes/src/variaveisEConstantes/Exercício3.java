@@ -1,9 +1,13 @@
 package variaveisEConstantes;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercício3 {
 	public static void main(String[] args) {
+		
+		DecimalFormat df = new DecimalFormat("####.##");
+		
 		float salarioBruto, adicionalNoturno, horasExtras, descontos, salarioLiquido;
 
 		Scanner leia = new Scanner(System.in);
@@ -22,7 +26,8 @@ public class Exercício3 {
 
 		salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras * 5) - descontos;
 
-		System.out.println("Salário Líquido: " + salarioLiquido);
+		System.out.println("Salário Líquido: " +  df.format(salarioLiquido));
 
+		leia.close();
 	}
 }
