@@ -5,21 +5,21 @@ import java.util.Scanner;
 public class Exercício4 {
 	public static void main(String[] args) {
 
-		int n1, n2, n3, n4, diferença;
+		float n1, n2, n3, n4, diferença;
 
 		Scanner leia = new Scanner(System.in);
 
 		System.out.println("Digite o primeiro número: ");
-		n1 = leia.nextInt();
+		n1 = leia.nextFloat();
 
 		System.out.println("Digite o segundo número: ");
-		n2 = leia.nextInt();
+		n2 = leia.nextFloat();
 
 		System.out.println("Digite o terceiro número: ");
-		n3 = leia.nextInt();
+		n3 = leia.nextFloat();
 
 		System.out.println("Digite o quarto número: ");
-		n4 = leia.nextInt();
+		n4 = leia.nextFloat();
 
 		diferença = (n1 * n2) - (n3 * n4);
 
