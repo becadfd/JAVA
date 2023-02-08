@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Exercício2 {
 	public static void main(String[] args) {
 		
-		DecimalFormat df = new DecimalFormat("###.##");
+		DecimalFormat df = new DecimalFormat("###.#");
 
 		float nota1, nota2, nota3, nota4, mediaFinal;
 
