@@ -26,8 +26,13 @@ public class Exercício3 {
 
 		salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras * 5) - descontos;
 
+<<<<<<< HEAD:variaveisEConstantes/src/variaveisEConstantes/Exercício3.java
 		System.out.println("Salário Líquido: " +  df.format(salarioLiquido));
+=======
+		System.out.println("Salário Líquido: " + df.format(salarioLiquido));
+>>>>>>> e9c34e8b8ac073b608e9611f54eea0eb0daffa55:Váriaveis/variaveisEConstantes/src/variaveisEConstantes/Exercício3.java
 
 		leia.close();
 	}
 }
+

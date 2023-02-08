@@ -6,8 +6,11 @@ import java.util.Scanner;
 public class Exercício4 {
 	public static void main(String[] args) {
 
+<<<<<<< HEAD:variaveisEConstantes/src/variaveisEConstantes/Exercício4.java
 		DecimalFormat df = new DecimalFormat("###");
 
+=======
+>>>>>>> e9c34e8b8ac073b608e9611f54eea0eb0daffa55:Váriaveis/variaveisEConstantes/src/variaveisEConstantes/Exercício4.java
 		float n1, n2, n3, n4, diferença;
 
 		Scanner leia = new Scanner(System.in);

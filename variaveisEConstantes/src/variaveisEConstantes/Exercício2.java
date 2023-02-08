@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 public class Exercício2 {
 	public static void main(String[] args) {
+<<<<<<< HEAD:variaveisEConstantes/src/variaveisEConstantes/Exercício2.java
+=======
+		
+>>>>>>> e9c34e8b8ac073b608e9611f54eea0eb0daffa55:Váriaveis/variaveisEConstantes/src/variaveisEConstantes/Exercício2.java
 		DecimalFormat df = new DecimalFormat("#.#");
 
 		float nota1, nota2, nota3, nota4, mediaFinal;

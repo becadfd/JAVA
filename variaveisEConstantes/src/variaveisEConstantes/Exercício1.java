@@ -21,7 +21,11 @@ public class Exercício1 {
 
 		novoSalario = salario + abono;
 		System.out.println("Novo Salário: " + df.format(novoSalario));
+<<<<<<< HEAD:variaveisEConstantes/src/variaveisEConstantes/Exercício1.java
 	
 		leia.close();
+=======
+
+>>>>>>> e9c34e8b8ac073b608e9611f54eea0eb0daffa55:Váriaveis/variaveisEConstantes/src/variaveisEConstantes/Exercício1.java
 	}
 }
