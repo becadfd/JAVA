@@ -21,13 +21,13 @@ public class If1 {
 		calculoAB = a + b;
 
 		if (calculoAB > c) {
-			System.out.println(a + " + " + " = " + calculoAB + ">" + c);
+			System.out.println(a + " + " + "b" + " = " + calculoAB + ">" + c);
 			System.out.println("A soma de a+b é maior do que c");
 		} else if (calculoAB < c) {
-			System.out.println(a + " + " + " = " + calculoAB + " < " + c);
+			System.out.println(a + " + " + "b" + " = " + calculoAB + " < " + c);
 			System.out.println("A soma de a+b é menor do que c");
 		} else {
-			System.out.println(a + " - " + " = " + calculoAB + " = " + c);
+			System.out.println(a + " - " + "b" + " = " + calculoAB + " = " + c);
 			System.out.println("A soma de a+b é igual do que c");
 		}
 
