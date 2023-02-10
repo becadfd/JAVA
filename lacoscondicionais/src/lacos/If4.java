@@ -26,17 +26,29 @@ public class If4 {
 				if (animal3.equals("carnívero"))
 					System.out.println("águia");
 				else
-					System.out.println("pomba");}
-			else {
-				if (animal3.equals("onívoro")) 
+					System.out.println("pomba");
+			} else {
+				if (animal3.equals("onívoro"))
 					System.out.println("homem");
-				}else {
-						System.out.println("lagarta");
-				} 
-				
-		leia.close();
+				else
+					System.out.println("vaca");
 			}
-			
-			
+		else {
+			if (animal2.equals("inseto")) {
+				if (animal3.equals("hematofago"))
+					System.out.println("pulga");
+				else
+					System.out.println("lagarta");
+			} else {
+				if (animal3.equals("hematofago"))
+					System.out.println("sanguessuga");
+				else
+					System.out.println("minhoca");
+			}
+
+		}
+
+		leia.close();
 	}
 
+}

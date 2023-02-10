@@ -38,39 +38,39 @@ public class Switch2 {
 		switch (cargo) {
 		case 1:
 			System.out.println("Nome do colaborador: " + colaborador);
-			System.out.println("Cargo: " + cargo);
+			System.out.println("Cargo: Gerente");
 			salariol = salario + (00.10f * salario);
-			System.out.println("Novo salário: " + df.format(salariol));
+			System.out.println("Salário Líquido: " + df.format(salariol));
 			break;
 		case 2:
 			System.out.println("Nome do colaborador: " + colaborador);
-			System.out.println("Cargo: " + cargo);
+			System.out.println("Cargo: Vendedor");
 			salariol = salario + (00.07f * salario);
-			System.out.println("Novo salário: " + df.format(salariol));
+			System.out.println("Salário Líquido: " + df.format(salariol));
 			break;
 		case 3:
 			System.out.println("Nome do colaborador: " + colaborador);
-			System.out.println("Cargo: " + cargo);
+			System.out.println("Cargo: Supervisor");
 			salariol = salario + (00.09f * salario);
-			System.out.println("Novo salário: " + df.format(salariol));
+			System.out.println("Salário Líquido: " + df.format(salariol));
 			break;
 		case 4:
 			System.out.println("Nome do colaborador: " + colaborador);
-			System.out.println("Cargo: " + cargo);
+			System.out.println("Cargo: Motorista");
 			salariol = salario + (00.06f * salario);
-			System.out.println("Novo salário: " + df.format(salariol));
+			System.out.println("Salário Líquido: " + df.format(salariol));
 			break;
 		case 5:
 			System.out.println("Nome do colaborador: " + colaborador);
-			System.out.println("Cargo: " + cargo);
+			System.out.println("Cargo: Estoquista");
 			salariol = salario + (00.05f * salario);
-			System.out.println("Novo salário: " + df.format(salariol));
+			System.out.println("Salário Líquido: " + df.format(salariol));
 			break;
 		case 6:
 			System.out.println("Nome do colaborador: " + colaborador);
-			System.out.println("Cargo: " + cargo);
+			System.out.println("Cargo: Técnico de TI ");
 			salariol = salario + (00.08f * salario);
-			System.out.println("Novo salário: " + df.format(salariol));
+			System.out.println("Salário Líquido: " + df.format(salariol));
 			break;
 
 		}
