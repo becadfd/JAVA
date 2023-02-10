@@ -22,8 +22,8 @@ public class While1 {
 			idade = ler.nextInt();
 		}
 
-		System.out.println("Número de pessoas com mais de 21 anos: " + menor21);
-		System.out.println("Número de pessoas com menos de 50 anos: " + maior50);
+		System.out.println("Número de pessoas com menos de 21 anos: " + menor21);
+		System.out.println("Número de pessoas com mais de 50 anos: " + maior50);
 
 		ler.close();
 	}
