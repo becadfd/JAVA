@@ -9,15 +9,15 @@ public class If4 {
 
 		String animal1, animal2, animal3;
 
-		System.out.println("Digite o primeiro animal: ");
+		System.out.println("Digite o primeiro atributo: ");
 		leia.skip("\\R?");
 		animal1 = leia.nextLine();
 
-		System.out.println("Digite o segundo animal: ");
+		System.out.println("Digite o segundo atributo: ");
 		leia.skip("\\R?");
 		animal2 = leia.nextLine();
 
-		System.out.println("Digite o terceiro animal: ");
+		System.out.println("Digite o terceiro atributo: ");
 		leia.skip("\\R?");
 		animal3 = leia.nextLine();
 
