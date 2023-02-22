@@ -76,6 +76,18 @@ public class Curso {
 		String curso = "";
 		int periodo = 0;
 
+		System.out.println("Bem-vinde a nossa plataforma de cursos digitais!");
+		System.out.println("                                                ");
+		System.out.println("************************************************");
+		System.out.println("                                                ");
+        System.out.println("1- Alune: ");
+        System.out.println("2 - Curso: ");
+        System.out.println("3- Turma: ");
+        System.out.println("4- Período: ");
+        System.out.println("4- Matéria: ");
+        System.out.println("Professore: ");
+		
+		
 		switch (this.curso) {
 		case 1 -> curso = "Design Gráfico";
 		case 2 -> curso = "Desenvolvimento de Games";
@@ -98,15 +110,26 @@ public class Curso {
 		switch (this.materia) {
 		case 1 -> System.out.println("Geometria");
 		case 2 -> System.out.println("Criação de Layout");
-		case 3 -> System.out.println("");
-		case 4 -> System.out.println("");
-		case 5 -> System.out.println("");
-		case 6 -> System.out.println("");
-		case 7 -> System.out.println("");
-		case 8 -> System.out.println("");
-		
-
+		case 3 -> System.out.println("Game Design");
+		case 4 -> System.out.println("Animação e Modelagem 3D");
+		case 5 -> System.out.println("Desenvolvimento De Aplicações Ios");
+		case 6 -> System.out.println("Desenvolvimento De Aplicações Android");
+		case 7 -> System.out.println("Representação Digital");
+		case 8 -> System.out.println("Semiótica");
+		default -> System.out.println("Matéria não encontrada!");
 		}
 
+		switch (this.professore) {
+		case 1 -> System.out.println("Rogério");
+		case 2 -> System.out.println("Manuela");
+		case 3 -> System.out.println("Kim");
+		case 4 -> System.out.println("Pedro");
+		case 5 -> System.out.println("Marcelo");
+		case 6 -> System.out.println("Paula");
+		case 7 -> System.out.println("Camila");
+		case 8 -> System.out.println("Amanda");
+		default -> System.out.println("Professore não encontrado!");
+
+		}
 	}
 }

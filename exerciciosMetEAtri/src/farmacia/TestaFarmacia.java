@@ -1,19 +1,47 @@
 package farmacia;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestaFarmacia {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
+		ArrayList<Farmacia> medicamentos = new ArrayList<Farmacia>();
 
-		Farmacia c1 = new Farmacia(6, 6, 6, 1, 10);
-		c1.visualizar();
+		String opcao, tipo, produto;
 
-		Farmacia c2 = new Farmacia(3, 3, 3, 2, 7 * 2);
-		c2.visualizar();
+		float valor, quantidade, valorTotal;
 
-		int opcao;
+		do {
+
+			System.out.println("Tipo: ");
+			tipo = ler.next();
+
+			System.out.println("Produto: ");
+			produto = ler.next();
+
+			System.out.println("Valor unitário: ");
+			valor = ler.nextFloat();
+
+			System.out.println("Quantidade: ");
+			quantidade = ler.nextFloat();
+
+			System.out.println("Valor total: ");
+			valorTotal = ler.nextFloat();
+
+			Farmacia f1 = new Farmacia(tipo, produto, valor, quantidade, valorTotal);
+
+			medicamentos.add(f1);
+
+			System.out.println("\nDeseja continuar? ");
+			ler.skip("\\R?");
+			opcao = ler.nextLine();
+
+		} while (opcao.equalsIgnoreCase("S"));
+
+		for (var medicamento : medicamentos)
+			medicamento.visualizar();
 
 		while (true) {
 			System.out.println("****************************************************************");
@@ -28,21 +56,6 @@ public class TestaFarmacia {
 			System.out.println("****************************************************************");
 			System.out.println("                                                                ");
 			System.out.println("Digite uma opção para começar: ");
-
-			opcao = ler.nextInt();
-
-			if (opcao == 3) {
-				System.out
-						.println("Obrigade por visitar nossa farmácia!\nFarmácia da Vila - A fármacia da sua família!");
-				ler.close();
-				System.exit(0);
-			}
-
-			switch (opcao) {
-			case 1 -> System.out.println("Lista de medicações\n\n");
-			case 2 -> System.out.println("Digite o código do produto\n\n");
-			default -> System.out.println("Opção inválida!");
-			}
 
 		}
 	}
