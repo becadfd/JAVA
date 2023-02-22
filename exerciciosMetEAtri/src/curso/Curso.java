@@ -1,6 +1,8 @@
 package curso;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Curso {
 
@@ -74,31 +76,21 @@ public class Curso {
 		ArrayList<Integer> periodos = new ArrayList<Integer>();
 
 		String curso = "";
-		int periodo = 0;
+		String turma = "";
+		String materia = "";
+		String professore = "";
 
-		System.out.println("Bem-vinde a nossa plataforma de cursos digitais!");
-		System.out.println("                                                ");
-		System.out.println("************************************************");
-		System.out.println("                                                ");
-        System.out.println("1- Alune: ");
-        System.out.println("2 - Curso: ");
-        System.out.println("3- Turma: ");
-        System.out.println("4- Período: ");
-        System.out.println("4- Matéria: ");
-        System.out.println("Professore: ");
-		
-		
 		switch (this.curso) {
 		case 1 -> curso = "Design Gráfico";
 		case 2 -> curso = "Desenvolvimento de Games";
 		case 3 -> curso = "Desenvolvimento Mobile";
 		case 4 -> curso = "Desenho Digital";
-		default -> System.out.println("Curso inexistente!");
+
 		}
 
 		switch (this.turma) {
-		case 1 -> System.out.println("Turma 1");
-		case 2 -> System.out.println("Turma 2");
+		case 1 -> turma = "1";
+		case 2 -> turma = "2";
 		default -> System.out.println("Turma não encontrada");
 		}
 
@@ -108,28 +100,39 @@ public class Curso {
 			System.out.println(periodos.indexOf(periodo));
 
 		switch (this.materia) {
-		case 1 -> System.out.println("Geometria");
-		case 2 -> System.out.println("Criação de Layout");
-		case 3 -> System.out.println("Game Design");
-		case 4 -> System.out.println("Animação e Modelagem 3D");
-		case 5 -> System.out.println("Desenvolvimento De Aplicações Ios");
-		case 6 -> System.out.println("Desenvolvimento De Aplicações Android");
-		case 7 -> System.out.println("Representação Digital");
-		case 8 -> System.out.println("Semiótica");
+		case 1 -> materia = "Geometria";
+		case 2 -> materia = "Criação de Layout";
+		case 3 -> materia = "Game Design";
+		case 4 -> materia = "Animação e Modelagem 3D";
+		case 5 -> materia = "Desenvolvimento De Aplicações Ios";
+		case 6 -> materia = "Desenvolvimento De Aplicações Android";
+		case 7 -> materia = "Representação Digital";
+		case 8 -> materia = "Semiótica";
 		default -> System.out.println("Matéria não encontrada!");
 		}
 
 		switch (this.professore) {
-		case 1 -> System.out.println("Rogério");
-		case 2 -> System.out.println("Manuela");
-		case 3 -> System.out.println("Kim");
-		case 4 -> System.out.println("Pedro");
-		case 5 -> System.out.println("Marcelo");
-		case 6 -> System.out.println("Paula");
-		case 7 -> System.out.println("Camila");
-		case 8 -> System.out.println("Amanda");
-		default -> System.out.println("Professore não encontrado!");
-
+		case 1 -> professore = "Rogério";
+		case 2 -> professore = "Manuela";
+		case 3 -> professore = "Kim";
+		case 4 -> professore = "Pedro";
+		case 5 -> professore = "Marcelo";
+		case 6 -> professore = "Paula";
+		case 7 -> professore = "Camila";
+		case 8 -> professore = "Amanda";
+		default -> professore = "Professore não encontrado!";
 		}
+
+		System.out.println("Bem-vinde a nossa plataforma de cursos digitais!");
+		System.out.println("                                                ");
+		System.out.println("************************************************");
+		System.out.println("                                                ");
+		System.out.println("1- Alune: " + this.aluno);
+		System.out.println("2 - Curso: " + curso);
+		System.out.println("3- Turma: " + turma);
+		System.out.println("4- Período: " + this.periodo);
+		System.out.println("4- Matéria: " + materia);
+		System.out.println("Professore: " + professore);
+
 	}
 }
