@@ -1,27 +1,26 @@
 package farmacia;
 
-public class Farmacia {
+public abstract class Farmacia {
 
-	private String tipo;
+	private int tipo;
 	private String produto;
 	private float valor;
-	private float quantidade;
-	private float valorTotal;
+	private int estoque;
+	private long id;
 
-	public Farmacia(String tipo, String produto, float valor, float quantidade, float valorTotal) {
-		super();
+	public Farmacia(int tipo, String produto, float valor, int estoque, long id) {
 		this.tipo = tipo;
 		this.produto = produto;
 		this.valor = valor;
-		this.quantidade = quantidade;
-		this.valorTotal = valorTotal;
+		this.estoque = estoque;
+		this.id = id;
 	}
 
-	public String getTipo() {
+	public int getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(String tipo) {
+	public void setTipo(int tipo) {
 		this.tipo = tipo;
 	}
 
@@ -41,23 +40,30 @@ public class Farmacia {
 		this.valor = valor;
 	}
 
-	public float getQuantidade() {
-		return quantidade;
+	public int getEstoque() {
+		return estoque;
 	}
 
-	public void setQuantidade(float quantidade) {
-		this.quantidade = quantidade;
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
 	}
 
-	public float getValorTotal() {
-		return valorTotal;
+	public long getId() {
+		return id;
 	}
 
-	public void setValorTotal(float valorTotal) {
-		this.valorTotal = valorTotal;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public void visualizar() {
+
+		String tipo = "";
+
+		switch (this.tipo) {
+		case 1 -> tipo = "Medicamento";
+		case 2 -> tipo = "Perfumaria";
+		}
 
 		System.out.println("****************************************************************");
 		System.out.println("                                                                ");
@@ -66,11 +72,10 @@ public class Farmacia {
 		System.out.println("****************************************************************");
 		System.out.println("                                                                ");
 		System.out.println("                   1- Produto: " + this.produto);
-		System.out.println("                   2- Tipo: " + this.tipo);
-		System.out.println("                   3- Valor unitário: " + valor);
-		System.out.println("                   4- Quantidade: " + this.quantidade);
-		System.out.println("                   5- Valor Total: " + this.valorTotal);
-
+		System.out.println("                   2- Tipo: " + tipo);
+		System.out.println("                   3- Valor unitário: " + this.valor);
+		System.out.println("                   4- Quantidade: " + this.estoque);
+		System.out.println("                   5- Valor Total: " + this.id);
 
 	}
 }

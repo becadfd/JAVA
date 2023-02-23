@@ -7,58 +7,77 @@ public class TestaFarmacia {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
-		ArrayList<Farmacia> medicamentos = new ArrayList<Farmacia>();
-
-		String opcao, tipo, produto;
-
-		float valor, quantidade, valorTotal;
+		ArrayList<Farmacia> produtos = new ArrayList<Farmacia>();
+		
+		String opcao, produto, tipoM, tipoP;
+		int estoque, tipo;
+		float valor;
+		long id;
 
 		do {
 
 			System.out.println("Tipo: ");
-			tipo = ler.next();
+			tipo = ler.nextInt();
 
 			System.out.println("Produto: ");
-			produto = ler.next();
+			ler.skip("\\R?");
+			produto = ler.nextLine();
 
 			System.out.println("Valor unitário: ");
 			valor = ler.nextFloat();
 
-			System.out.println("Quantidade: ");
-			quantidade = ler.nextFloat();
+			System.out.println("Estoque: ");
+			estoque = ler.nextInt();
 
-			System.out.println("Valor total: ");
-			valorTotal = ler.nextFloat();
+			System.out.println("Id: ");
+			id = ler.nextLong();
 
-			Farmacia f1 = new Farmacia(tipo, produto, valor, quantidade, valorTotal);
+			switch (tipo) {
+			case 1 -> {
+				System.out.println("\nTipo de Medicamento: ");
+				ler.skip("\\R?");
+				tipoM = ler.nextLine();
 
-			medicamentos.add(f1);
+				Medicamentos m1 = new Medicamentos(tipo, produto, valor, estoque, id, tipoM);
+				produtos.add(m1);
+
+			}
+			case 2 -> {
+				System.out.println("\nTipo de Cosmético: ");
+				ler.skip("\\R?");
+				tipoP = ler.nextLine();
+
+				Perfumaria p1 = new Perfumaria(tipo, produto, valor, estoque, id, tipoP);
+				produtos.add(p1);
+			}
+			}
 
 			System.out.println("\nDeseja continuar? ");
 			ler.skip("\\R?");
 			opcao = ler.nextLine();
 
 		} while (opcao.equalsIgnoreCase("S"));
+		
+		
+		
+		
 
-		for (var medicamento : medicamentos)
-			medicamento.visualizar();
+		// while (true) {
+		// System.out.println("****************************************************************");
+		// System.out.println(" ");
+		// System.out.println(" 💊 Bem-vinde a Farmácia da Vila 💊 ");
+		// System.out.println(" ");
+		// System.out.println("****************************************************************");
+		// System.out.println(" 1- Ver lista de medicações ");
+		// System.out.println(" 2- Comprar ");
+		// System.out.println(" 3- Sair ");
+		// System.out.println(" ");
+		// System.out.println("****************************************************************");
+		// System.out.println(" ");
+		// System.out.println("Digite uma opção para começar: ");
 
-		while (true) {
-			System.out.println("****************************************************************");
-			System.out.println("                                                                ");
-			System.out.println("            💊 Bem-vinde a Farmácia da Vila 💊                   ");
-			System.out.println("                                                                ");
-			System.out.println("****************************************************************");
-			System.out.println("            1- Ver lista de medicações                          ");
-			System.out.println("            2- Comprar                                          ");
-			System.out.println("            3- Sair                                             ");
-			System.out.println("                                                                ");
-			System.out.println("****************************************************************");
-			System.out.println("                                                                ");
-			System.out.println("Digite uma opção para começar: ");
+		// }
 
-		}
-	
 	}
 
 }

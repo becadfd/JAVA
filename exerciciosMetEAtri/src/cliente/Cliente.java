@@ -1,13 +1,13 @@
 package cliente;
 
 public class Cliente {
-	
+
 	private String nome;
 	private int idade;
 	private String genero;
 	private float telefone;
 	private int assinatura;
-	
+
 	public Cliente(String nome, int idade, String genero, float telefone, int assinatura) {
 		this.nome = nome;
 		this.idade = idade;
@@ -55,9 +55,22 @@ public class Cliente {
 	public void setAssinatura(int assinatura) {
 		this.assinatura = assinatura;
 	}
-	
-	public void
-	
-	
+
+	public void visualizar() {
+
+		String genero;
+		String assinatura;
+
+		System.out.println("**************************************");
+		System.out.println("                                      ");
+		System.out.println("           Dados do Cliente           ");
+		System.out.println("                                      ");
+		System.out.println("**************************************");
+		System.out.println("1- Nome: " + this.nome);
+		System.out.println("2- Idade: " + this.idade);
+		System.out.println("3- Gênero: " + this.genero);
+		System.out.println("4- Telefone: " + this.telefone);
+		System.out.println("5- Assinatura: " + this.assinatura);
+	}
 
 }
