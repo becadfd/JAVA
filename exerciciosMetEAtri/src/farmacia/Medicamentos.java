@@ -17,7 +17,7 @@ public class Medicamentos extends Farmacia {
 		this.tipoM = tipoM;
 	}
 
-	public void visualiar() {
+	public void visualizar() {
 		super.visualizar();
 		System.out.println("                   6- Tipo de Medicamento: " + this.tipoM);
 	}

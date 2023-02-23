@@ -1,21 +1,64 @@
 package curso;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-
-import farmacia.Farmacia;
 
 public class TestaCurso {
 
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
+		ArrayList<Curso> cursos = new ArrayList<Curso>();
 
-		Curso c1 = new Curso("Rafaella Martinez", 2, 2, 3, 4, 3);
-		c1.visualizar();
+		String opcao, aluno, periodo, cursoL, cursoE;
+		int idade, tipoC;
+		long idAluno;
 
-		Curso c2 = new Curso("Lindomar Cardoso", 4, 1, 1, 7, 2);
-		c2.visualizar();
+		do {
+			System.out.println("Id do Aluno: ");
+			idAluno = ler.nextInt();
 
-		//int opcao;
+			System.out.println("Nome do Aluno: ");
+			ler.skip("\\R?");
+			aluno = ler.nextLine();
+
+			System.out.println("Idade do Aluno: ");
+			idade = ler.nextInt();
+
+			System.out.println("Tipo do Curso: ");
+			tipoC = ler.nextInt();
+
+			System.out.println("Período: ");
+			ler.skip("\\R?");
+			periodo = ler.nextLine();
+
+			switch (tipoC) {
+			case 1 -> {
+				System.out.println("Qual curso livre? ");
+				ler.skip("\\R?");
+				cursoL = ler.nextLine();
+
+				CursoLivre cl1 = new CursoLivre(aluno, tipoC, idade, periodo, idAluno, cursoL);
+				cursos.add(cl1);
+			}
+			case 2 -> {
+				System.out.println("Qual especialização? ");
+				ler.skip("\\R?");
+				cursoE = ler.nextLine();
+
+				Especialização ce1 = new Especialização(aluno, tipoC, idade, periodo, idAluno, cursoE);
+				cursos.add(ce1);
+			}
+
+			}
+
+			System.out.println("\nDeseja continuar? ");
+			ler.skip("\\R?");
+			opcao = ler.nextLine();
+
+		} while (opcao.equalsIgnoreCase("S"));
+
+		for (var curso : cursos)
+			curso.visualizar();
 
 	}
 

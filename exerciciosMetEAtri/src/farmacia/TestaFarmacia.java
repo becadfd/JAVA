@@ -8,7 +8,7 @@ public class TestaFarmacia {
 	public static void main(String[] args) {
 		Scanner ler = new Scanner(System.in);
 		ArrayList<Farmacia> produtos = new ArrayList<Farmacia>();
-		
+
 		String opcao, produto, tipoM, tipoP;
 		int estoque, tipo;
 		float valor;
@@ -57,10 +57,9 @@ public class TestaFarmacia {
 			opcao = ler.nextLine();
 
 		} while (opcao.equalsIgnoreCase("S"));
-		
-		
-		
-		
+
+		for (var produtox : produtos)
+			produtox.visualizar();
 
 		// while (true) {
 		// System.out.println("****************************************************************");
