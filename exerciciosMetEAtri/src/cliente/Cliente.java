@@ -4,16 +4,16 @@ public class Cliente {
 
 	private String nome;
 	private int idade;
-	private String genero;
-	private float telefone;
-	private int assinatura;
+	private int genero;
+	private long telefone;
+	private int tipoP;
 
-	public Cliente(String nome, int idade, String genero, float telefone, int assinatura) {
+	public Cliente(String nome, int idade, int genero, long telefone, int tipoP) {
 		this.nome = nome;
 		this.idade = idade;
 		this.genero = genero;
 		this.telefone = telefone;
-		this.assinatura = assinatura;
+		this.tipoP = tipoP;
 	}
 
 	public String getNome() {
@@ -32,34 +32,47 @@ public class Cliente {
 		this.idade = idade;
 	}
 
-	public String getGenero() {
+	public int getGenero() {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
+	public void setGenero(int genero) {
 		this.genero = genero;
 	}
 
-	public float getTelefone() {
+	public long getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(float telefone) {
+	public void setTelefone(long telefone) {
 		this.telefone = telefone;
 	}
 
-	public int getAssinatura() {
-		return assinatura;
+	public int getTipoP() {
+		return tipoP;
 	}
 
-	public void setAssinatura(int assinatura) {
-		this.assinatura = assinatura;
+	public void setTipoP(int tipoP) {
+		this.tipoP = tipoP;
 	}
 
 	public void visualizar() {
 
-		String genero;
-		String assinatura;
+		String genero = "";
+		String tipoP = "";
+
+		switch(this.genero) {
+		case 1 -> genero = "Feminino";
+		case 2 -> genero = "Masculino";
+		case 3 -> genero = "Neutro";
+		default -> System.out.println("\nGênero não encontrado!");
+		}
+		
+		switch(this.tipoP) {
+		case 1 -> tipoP = "Pessoa Física";
+		case 2 -> tipoP = "Pessoa Jurídica";
+		default -> System.out.println("\nOpção Inválida!");
+		}
 
 		System.out.println("**************************************");
 		System.out.println("                                      ");
@@ -68,9 +81,9 @@ public class Cliente {
 		System.out.println("**************************************");
 		System.out.println("1- Nome: " + this.nome);
 		System.out.println("2- Idade: " + this.idade);
-		System.out.println("3- Gênero: " + this.genero);
+		System.out.println("3- Gênero: " + genero);
 		System.out.println("4- Telefone: " + this.telefone);
-		System.out.println("5- Assinatura: " + this.assinatura);
+		System.out.println("5- Tipo de Pessoa: " + tipoP);
 	}
 
 }
